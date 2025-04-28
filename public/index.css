@@ -1,0 +1,62 @@
+
+:root {
+    --foreground-color: #ffffff;
+    --paragraph-color: #fdfdfd;
+    --background-color: #222226;
+    --background-color-secondary: #2E2E32;
+    --link-color: #3584E4;
+    --pressed-link-color: #9141AC;
+    --hover-link-color: #208DA0;
+    --accent-color: #3584E4;
+}
+
+body {
+    font-family: "Adwaita Sans", sans-serif;
+    background-color: var(--background-color);
+}
+
+h1 {
+    color: var(--foreground-color);
+    font-family: "Adwaita Sans", sans-serif;
+}
+
+h5 {
+    color: var(--foreground-color);
+    font-family: "Adwaita Sans", sans-serif;
+}
+
+p {
+    color: var( --paragraph-color);
+    font-family: "Adwaita Sans", sans-serif;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*width: 100%;*/
+    padding: 10px;
+    background-color: var(--background-color-secondary);
+}
+
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--pressed-link-color);
+}
+
+a:hover {
+    color: var(--hover-link-color);
+}
+
+main {
+    padding: 10px;
+    margin: 10px;
+}
+
+li::marker {
+    color: var(--accent-color);
+}
