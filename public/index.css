@@ -11,6 +11,20 @@
     --accent-color: #3584E4;
 }
 
+button {
+    background-color: var(--accent-color);
+    color: var(--foreground-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px var(--border-color);
+}
+
+button:active {
+    background-color: var(--pressed-link-color);
+    border: dotted;
+}
+
 body {
     font-family: "Adwaita Sans", sans-serif;
     background-color: var(--background-color);
@@ -68,18 +82,4 @@ main {
 
 li::marker {
     color: var(--accent-color);
-}
-
-button {
-    background-color: var(--accent-color);
-    color: var(--foreground-color);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    border: solid 2px var(--border-color);
-}
-
-button:active {
-    background-color: var(--pressed-link-color);
-    border: dotted;
 }
