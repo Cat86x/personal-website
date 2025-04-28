@@ -47,7 +47,7 @@ h5 {
 }
 
 p {
-    color: var( --paragraph-color);
+    color: var(--paragraph-color);
     font-family: "Adwaita Sans", sans-serif;
 }
 
