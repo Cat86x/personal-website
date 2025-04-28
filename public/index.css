@@ -2,6 +2,7 @@
 :root {
     --foreground-color: #ffffff;
     --paragraph-color: #fdfdfd;
+    --border-color: #000000;
     --background-color: #222226;
     --background-color-secondary: #2E2E32;
     --link-color: #3584E4;
@@ -16,6 +17,11 @@ body {
 }
 
 h1 {
+    color: var(--foreground-color);
+    font-family: "Adwaita Sans", sans-serif;
+}
+
+h2 {
     color: var(--foreground-color);
     font-family: "Adwaita Sans", sans-serif;
 }
@@ -61,4 +67,21 @@ main {
 
 li::marker {
     color: var(--accent-color);
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--foreground-color);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 2px var(--border-color);
+}
+
+button:active {
+    background-color: var(--pressed-link-color);
+    color: var(--foreground-color);
+    border-radius: 10px;
+    padding: 10px;
+    border: dotted 2px var(--border-color);
 }
