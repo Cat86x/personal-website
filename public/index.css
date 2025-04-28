@@ -53,6 +53,8 @@ a:hover {
 }
 
 main {
+    background-color: var(--background-color-secondary);
+    border-radius: 13px;
     padding: 10px;
     margin: 10px;
 }
