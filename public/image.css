@@ -1,0 +1,16 @@
+img {
+    width: 70%;
+    border-radius: 13px;
+    object-fit: fill;
+    height: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padd_bottom {
+    padding: 15px;
+}
