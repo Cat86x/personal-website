@@ -1,0 +1,127 @@
+:root {
+    /* Adwaita dark theme colors */
+    --foreground-color: #ffffff;
+    --paragraph-color: #eeeeec;
+    --border-color: #1b1b1b;
+    --background-color: #1e1e1e;
+    --background-color-secondary: #242424;
+    --link-color: #3584e4;
+    --pressed-link-color: #9141ac;
+    --hover-link-color: #62a0ea;
+    --accent-color: #3584e4;
+    --error-color: #ed333b;
+    --warning-color: #f8e45c;
+    --success-color: #57e389;
+
+    /* Adwaita spacing */
+    --spacing-xs: 4px;
+    --spacing-s: 8px;
+    --spacing-m: 12px;
+    --spacing-l: 16px;
+    --spacing-xl: 24px;
+    --spacing-xxl: 32px;
+
+    /* Border radius */
+    --border-radius-small: 6px;
+    --border-radius-medium: 9px;
+    --border-radius-large: 12px;
+}
+
+body {
+    font-family: "Cantarell", "Adwaita Sans", sans-serif;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    width: 75%;
+    padding-left: 12.5%;
+    margin: 0;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--foreground-color);
+    font-family: "Cantarell", "Adwaita Sans", sans-serif;
+    margin-top: var(--spacing-l);
+    margin-bottom: var(--spacing-m);
+    font-weight: 700;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: var(--spacing-xl);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4, h5, h6 {
+    font-size: 1rem;
+}
+
+p {
+    color: var(--paragraph-color);
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+    line-height: 1.6;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-m);
+    background-color: var(--background-color-secondary);
+    border-top: 1px solid var(--border-color);
+    z-index: 100;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:link {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--pressed-link-color);
+}
+
+a:hover {
+    color: var(--hover-link-color);
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+    border-radius: var(--border-radius-small);
+}
+
+main {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-large);
+    padding: var(--spacing-l);
+    margin: var(--spacing-l) 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+ul, ol {
+    padding-left: var(--spacing-xl);
+    margin: var(--spacing-m) 0;
+}
+
+li {
+    margin-bottom: var(--spacing-s);
+}
+
+li::marker {
+    color: var(--accent-color);
+}

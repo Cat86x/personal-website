@@ -1,0 +1,39 @@
+/* Image and gallery component styles - Adwaita theme */
+img {
+    width: 70%;
+    border-radius: var(--border-radius-large);
+    object-fit: cover;
+    height: auto;
+    max-width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+img:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery {
+    padding-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-l);
+}
+
+.gallery h2 {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-s);
+}
+
+.gallery img {
+    margin-bottom: var(--spacing-l);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    img {
+        width: 90%;
+    }
+}

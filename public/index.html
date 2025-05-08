@@ -3,47 +3,58 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home</title>
+        <title>Home | BofusLand</title>
         <link rel="icon" href="/images/icon.png" type="image/png" sizes="32x32">
-        <link rel="stylesheet" href="index.css" />
-        <link rel="stylesheet" href="button.css" />
-        <link rel="stylesheet" href="image.css" />
+        <link rel="stylesheet" href="styles/main.css" />
     </head>
 
     <body>
-        <h1>BofusLand</h1>
-        <main>
-            <p>
-                Bofusland.me is a personal website of mine. right now there isn't much, but I am going to add more.
-            </p>
-        </main>
-        <button>
-            This is a button that does nothing
-        </button>
-        <button id = "something_button">
-            This button does something.
-        </button>
-        <button id = "gallery">
-            Visit the gallery?
-        </button>
+        <div class="container">
+            <header class="margin-top-l margin-bottom-l">
+                <h1>BofusLand</h1>
+            </header>
+
+            <main>
+                <div class="card">
+                    <p>
+                        Bofusland.me is a personal website of mine. Right now there isn't much, but I am going to add more.
+                    </p>
+                </div>
+
+                <div class="flex justify-center margin-top-l">
+                    <button class="secondary">
+                        This is a button that does nothing
+                    </button>
+                    <button id="something_button">
+                        This button does something
+                    </button>
+                    <button id="gallery">
+                        Visit the gallery?
+                    </button>
+                </div>
+            </main>
+
+            <footer>
+                <div class="card margin-bottom-xl">
+                    <h5 class="margin-bottom-s">
+                        Interesting links:
+                    </h5>
+                    <ul>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Free ice cream (real!!!(Not fake!!!)).</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Cat86x">My GitHub</a>
+                        </li>
+                        <li>
+                            <a href="https://steamcommunity.com/id/catclaw64/">My Steam</a>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
         <script src="scripts/something.js"></script>
         <script src="scripts/gallery.js"></script>
     </body>
-
-    <footer>
-        <h5>
-            Interesting links:
-        </h5>
-        <ul>
-            <li>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Free ice cream (real!!!(Not fake!!!)).</a>
-            </li>
-            <li>
-                <a href="https://github.com/Cat86x">My GitHub</a>
-            </li>
-            <li>
-                <a href="https://steamcommunity.com/id/catclaw64/">My Steam</a>
-            </li>
-        </ul>
-    </footer>
 </html>

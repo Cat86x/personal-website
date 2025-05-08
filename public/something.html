@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Something</title>
-    <link rel="icon" href="/images/icon.png" type="image/png" sizes="32x32">
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="image.css" />
-    <header>
-        <h1>
-            Something
-        </h1>
-    </header>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Something | BofusLand</title>
+        <link rel="icon" href="/images/icon.png" type="image/png" sizes="32x32">
+        <link rel="stylesheet" href="styles/main.css" />
+    </head>
 
-    <body class="gallery">
-        <img src="/images/icon.png" alt="cat">
+    <body>
+        <div class="container">
+            <header class="margin-top-l margin-bottom-l">
+                <h1>Something</h1>
+            </header>
+
+            <main class="flex flex-column items-center">
+                <div class="card margin-bottom-l text-center">
+                    <p>This is something for no reason.</p>
+                </div>
+
+                <img src="/images/icon.png" alt="cat" class="margin-top-l" style="width: 200px; height: auto;">
+
+                <button id="something_button" class="margin-top-xl">
+                    Do something mysterious
+                </button>
+            </main>
+
+            <footer class="margin-top-xl">
+                <div class="flex justify-center margin-bottom-xl">
+                    <a href="/" class="button">Back home</a>
+                </div>
+            </footer>
+        </div>
+
+        <script src="scripts/something.js"></script>
     </body>
-
-    <footer>
-        <h2>
-            <a href="/">Back home?</a>
-        </h2>
-    </footer>
 </html>

@@ -1,0 +1,64 @@
+.padd_bottom {
+    padding-bottom: var(--spacing-l);
+}
+
+.margin-top-xs { margin-top: var(--spacing-xs); }
+.margin-top-s { margin-top: var(--spacing-s); }
+.margin-top-m { margin-top: var(--spacing-m); }
+.margin-top-l { margin-top: var(--spacing-l); }
+.margin-top-xl { margin-top: var(--spacing-xl); }
+
+.margin-bottom-xs { margin-bottom: var(--spacing-xs); }
+.margin-bottom-s { margin-bottom: var(--spacing-s); }
+.margin-bottom-m { margin-bottom: var(--spacing-m); }
+.margin-bottom-l { margin-bottom: var(--spacing-l); }
+.margin-bottom-xl { margin-bottom: var(--spacing-xl); }
+
+.padding-xs { padding: var(--spacing-xs); }
+.padding-s { padding: var(--spacing-s); }
+.padding-m { padding: var(--spacing-m); }
+.padding-l { padding: var(--spacing-l); }
+.padding-xl { padding: var(--spacing-xl); }
+
+/* Layout utilities */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-l);
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card {
+    align-content: center;
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-l);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--border-color);
+    margin: var(--spacing-m) 0;
+    width: 100%;
+}
