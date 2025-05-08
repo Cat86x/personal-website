@@ -1,0 +1,367 @@
+
+/* Big fish button styling */
+button.big_fish {
+    padding: var(--spacing-xl);
+    margin: var(--spacing-xl);
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(0, 120, 215, 0.1) 0%, rgba(0, 60, 120, 0.2) 100%);
+    border: 6px solid rgba(53, 132, 228, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 150, 255, 0.3), inset 0 0 30px rgba(0, 150, 255, 0.1);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+}
+
+button.big_fish::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+button.big_fish:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 150, 255, 0.4), inset 0 0 40px rgba(0, 150, 255, 0.2);
+    border-color: rgba(53, 132, 228, 0.8);
+}
+
+button.big_fish:hover::after {
+    opacity: 1;
+}
+
+button.big_fish:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 150, 255, 0.3), inset 0 0 20px rgba(0, 150, 255, 0.1);
+    background-color: rgba(0, 60, 120, 0.3);
+}
+
+/* Game stats and UI elements */
+.items-left {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    padding: var(--spacing-l);
+}
+
+.items-right {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-large);
+    padding: var(--spacing-l);
+    margin: var(--spacing-l);
+    min-width: 300px;
+    min-height: 200px;
+    flex: 1;
+}
+
+/* Flex container for game layout */
+.container .flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Score display styling */
+.score-display {
+    background: linear-gradient(to bottom, rgba(0, 60, 120, 0.2) 0%, rgba(0, 40, 80, 0.3) 100%);
+    border: 2px solid rgba(53, 132, 228, 0.6);
+    border-radius: var(--border-radius-medium);
+    padding: var(--spacing-m);
+    margin-bottom: var(--spacing-l);
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 150, 255, 0.1);
+}
+
+.score-display h2 {
+    margin: 0;
+    color: var(--foreground-color);
+    text-shadow: 0 0 5px rgba(0, 150, 255, 0.5);
+}
+
+.score-display p {
+    margin: var(--spacing-s) 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.score-display #score {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.score-display #fps {
+    color: rgba(53, 132, 228, 1);
+    font-weight: bold;
+}
+
+/* Fish and cats container styling */
+.fish-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative; /* This is needed for absolute positioning of cats */
+    overflow: hidden; /* Keep cats within the container */
+    background: radial-gradient(circle, rgba(53, 132, 228, 0.2) 0%, rgba(30, 30, 30, 0) 70%);
+    border-radius: 50%;
+}
+
+.fish {
+    position: relative;
+    z-index: 2;
+    width: 100px;
+    height: 60px;
+    animation: fishSwim 3s infinite alternate ease-in-out;
+}
+
+.fish-body {
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    background: linear-gradient(to right, #ff9500, #ffcc00);
+    border-radius: 50% 30% 30% 50%;
+    box-shadow: 0 0 15px rgba(255, 180, 0, 0.6);
+    position: relative;
+    left: 15px;
+    top: 10px;
+}
+
+.fish-eye {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 12px;
+    left: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.fish-tail {
+    position: absolute;
+    width: 25px;
+    height: 30px;
+    background: linear-gradient(to right, #ffcc00, #ff9500);
+    border-radius: 0 50% 50% 0;
+    right: -15px;
+    top: 5px;
+    transform-origin: left center;
+    animation: fishTail 1s infinite alternate ease-in-out;
+}
+
+.fish-fin {
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background: linear-gradient(to right, #ffcc00, #ff9500);
+    border-radius: 50%;
+    transform-origin: left center;
+}
+
+.fish-fin-top {
+    top: -10px;
+    left: 30px;
+    transform: rotate(-30deg);
+}
+
+.fish-fin-bottom {
+    bottom: -10px;
+    left: 30px;
+    transform: rotate(30deg);
+}
+
+@keyframes fishSwim {
+    0% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+@keyframes fishTail {
+    0% { transform: rotate(-15deg); }
+    100% { transform: rotate(15deg); }
+}
+
+.cats-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none; /* Allow clicks to pass through to the fish button */
+}
+
+.cat {
+    position: absolute;
+    font-size: 2rem; /* Smaller cats */
+    transform: translate(-50%, -50%); /* Center the cat at its position */
+    transition: all 0.3s ease; /* Smooth movement when cats are repositioned */
+    animation: catFloat 3s infinite alternate ease-in-out; /* Add a floating animation */
+}
+
+/* Animation for new cats */
+@keyframes newCatAppear {
+    0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+.cat-new {
+    animation: newCatAppear 0.5s ease-out forwards, catFloat 3s infinite alternate ease-in-out 0.5s;
+}
+
+@keyframes catFloat {
+    0% { transform: translate(-50%, -50%) rotate(-5deg); }
+    100% { transform: translate(-50%, -50%) rotate(5deg); }
+}
+
+/* Animation for fish click */
+@keyframes fishClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.fish-clicked {
+    animation: fishClick 0.2s ease;
+}
+
+/* Floating score animation */
+.floating-score {
+    position: absolute;
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.5rem;
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    animation: floatUp 1.5s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes floatUp {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+    10% { transform: translate(-50%, -50%) scale(1.2); opacity: 1; }
+    20% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    100% { transform: translate(-50%, -100%) scale(1); opacity: 0; }
+}
+
+/* Bubble container and bubbles */
+.bubble-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    animation: bubbleRise 4s ease-in forwards;
+}
+
+@keyframes bubbleRise {
+    0% { transform: translateY(0) scale(1); opacity: 0.7; }
+    100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+}
+
+/* Upgrades container styling */
+.upgrades-container {
+    margin-top: var(--spacing-l);
+    padding: var(--spacing-m);
+    background: linear-gradient(to bottom, rgba(0, 60, 120, 0.2) 0%, rgba(0, 40, 80, 0.3) 100%);
+    border: 2px solid rgba(53, 132, 228, 0.6);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 150, 255, 0.1);
+}
+
+.upgrades-container h2 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-m);
+    color: var(--foreground-color);
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 150, 255, 0.5);
+}
+
+/* Upgrade button styling */
+.upgrade-button {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--spacing-m);
+    padding: var(--spacing-m);
+    background: linear-gradient(to bottom, rgba(30, 30, 30, 0.8) 0%, rgba(20, 20, 20, 0.9) 100%);
+    border: 2px solid rgba(53, 132, 228, 0.4);
+    border-radius: var(--border-radius-medium);
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.upgrade-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.upgrade-button:hover:not([disabled]) {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 150, 255, 0.3);
+    border-color: rgba(53, 132, 228, 0.8);
+    background: linear-gradient(to bottom, rgba(0, 60, 120, 0.3) 0%, rgba(20, 20, 20, 0.9) 100%);
+}
+
+.upgrade-button:hover:not([disabled])::after {
+    left: 100%;
+}
+
+.upgrade-button:active:not([disabled]) {
+    transform: translateY(1px);
+    box-shadow: 0 2px 6px rgba(0, 150, 255, 0.2);
+}
+
+.upgrade-button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    border-color: rgba(100, 100, 100, 0.3);
+}
+
+.upgrade-button h3 {
+    margin: 0 0 var(--spacing-s);
+    color: var(--foreground-color);
+}
+
+.upgrade-button p {
+    margin: var(--spacing-xs) 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.upgrade-button .upgrade-cost {
+    font-weight: bold;
+    color: var(--success-color);
+}
+
+.upgrade-button .upgrade-count {
+    font-weight: bold;
+    color: rgba(53, 132, 228, 1);
+}

@@ -40,6 +40,14 @@
     align-items: center;
 }
 
+.items-left {
+    align-items: flex-start;
+}
+
+.items-right {
+    align-items: flex-end;
+}
+
 .justify-center {
     justify-content: center;
 }
