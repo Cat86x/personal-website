@@ -3,8 +3,9 @@
     --foreground-color: #ffffff;
     --paragraph-color: #eeeeec;
     --border-color: #1b1b1b;
-    --background-color: #1e1e1e;
-    --background-color-secondary: #242424;
+    --background-color: #1D1D20;
+    --background-color-secondary: #222226;
+    --background-color-tertiary: #2E2E32;
     --link-color: #3584e4;
     --pressed-link-color: #9141ac;
     --hover-link-color: #62a0ea;
@@ -28,7 +29,7 @@
 }
 
 body {
-    font-family: "Cantarell", "Adwaita Sans", sans-serif;
+    font-family: "Adwaita Sans", sans-serif;
     background-color: var(--background-color);
     color: var(--foreground-color);
     width: 75%;

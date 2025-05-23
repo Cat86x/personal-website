@@ -1,8 +1,8 @@
-/* Button component styles - Adwaita theme */
 button {
     background-color: var(--accent-color);
     color: var(--foreground-color);
     border-radius: var(--border-radius-medium);
+    /* Keep default padding */
     padding: var(--spacing-s) var(--spacing-l);
     margin: var(--spacing-m);
     border: none;
@@ -10,9 +10,9 @@ button {
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: background-color 0.2s ease;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     align-self: center;
+    transition: transform 0.1s ease-out, background-color 0.1s ease;
 }
 
 button:hover {
@@ -22,7 +22,8 @@ button:hover {
 button:active {
     background-color: var(--pressed-link-color);
     box-shadow: none;
-    transform: translateY(1px);
+    padding: calc(var(--spacing-s)) calc(var(--spacing-l) + 0px);
+    transform: scale(0.95);
 }
 
 button:focus {
@@ -30,10 +31,8 @@ button:focus {
     outline-offset: 2px;
 }
 
-/* Secondary button style */
 button.secondary {
     background-color: transparent;
-    border: 1px solid var(--accent-color);
     color: var(--accent-color);
 }
 
@@ -70,7 +69,8 @@ a.button:hover {
 a.button:active {
     background-color: var(--pressed-link-color);
     box-shadow: none;
-    transform: translateY(1px);
+    transform: scale(0.95);
+    padding: calc(var(--spacing-s)) calc(var(--spacing-l));
 }
 
 a.button.secondary {

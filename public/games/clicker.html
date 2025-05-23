@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BofusLand | Clicker Game</title>
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/clicker.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="margin-top-l margin-bottom-l">
+                <h1>Clicker Game</h1>
+            </header>
+
+            <main>
+                <div class="game-container">
+                    <div class="flex justify-center">
+                        <div class="money-counter">
+                            <h2 class="money-label">Money:</h2>
+                            <h2 id="money" class="money-value">0</h2>
+                        </div>
+                    </div>
+
+                    <div class="flex game-layout justify-center items-center">
+                        <div class="clicker-section">
+                            <button id="clicker" class="clicker-button">Click Me!</button>
+                        </div>
+
+                        <div class="card upgrades-container">
+                            <h2 class="text-center margin-bottom-m">Upgrades</h2>
+                            <div class="upgrade-item">
+                                <button class="secondary upgrade-button" id="stronger_clicks">Stronger Clicks</button>
+                                <div class="upgrade-price" id="stronger_clicks_price">3</div>
+                            </div>
+                            <div class="upgrade-item">
+                                <button class="secondary upgrade-button" id="extra_finger">Extra Finger</button>
+                                <div class="upgrade-price" id="extra_fingers_price">10</div>
+                            </div>
+                            <div class="upgrade-item">
+                                <button class="secondary upgrade-button" id="toes">Toes</button>
+                                <div class="upgrade-price" id="toes_price">1000</div>
+                            </div>
+                            <div class="upgrade-item">
+                                <button class="secondary upgrade-button" id="finger_splitting">Finger Splitting</button>
+                                <div class="upgrade-price" id="finger_splitting_price">5000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <footer class="margin-top-xl">
+                <div class="flex justify-center margin-bottom-xl">
+                    <a href="/" class="button">Back home</a>
+                </div>
+            </footer>
+        </div>
+        <script src="/scripts/clicker.js"></script>
+    </body>
+</html>

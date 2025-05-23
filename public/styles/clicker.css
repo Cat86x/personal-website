@@ -1,0 +1,106 @@
+/* Clicker Game Styles */
+
+.money-counter {
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-large);
+    padding: var(--spacing-m) var(--spacing-xl);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: var(--spacing-xl);
+    display: inline-flex;
+    align-items: center;
+}
+
+.money-value {
+    color: var(--success-color);
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 0;
+    padding-left: var(--spacing-s);
+}
+
+.money-label {
+    margin: 0;
+}
+
+.clicker-button {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: var(--spacing-l);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.clicker-button:hover {
+    transform: scale(1.05);
+}
+
+.clicker-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-l);
+    background-color: var(--background-color-secondary);
+    border-radius: var(--border-radius-large);
+    margin-bottom: var(--spacing-xl);
+}
+
+.upgrades-container {
+    width: 100%;
+    max-width: 400px;
+    margin-top: var(--spacing-l);
+}
+
+.upgrade-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--spacing-m);
+    padding: var(--spacing-s);
+    border-radius: var(--border-radius-medium);
+    background-color: rgba(53, 132, 228, 0.05);
+}
+
+.upgrade-button {
+    flex-grow: 1;
+    margin: var(--spacing-xs);
+}
+
+.upgrade-price {
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    padding: var(--spacing-xs) var(--spacing-s);
+    border-radius: var(--border-radius-small);
+    margin-left: var(--spacing-s);
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+.game-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clicker-section {
+    margin-right: var(--spacing-xl);
+}
+
+@media (max-width: 768px) {
+    .game-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .clicker-section {
+        margin-right: 0;
+        margin-bottom: var(--spacing-l);
+    }
+}
